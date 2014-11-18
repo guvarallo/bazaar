@@ -10,7 +10,14 @@
   <header>
     <%= render 'layouts/navigation' %>
   </header>
-<%= yield %>
+  <div id="wrap">
+    <%= yield %>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <%= render 'layouts/footer' %>
+    </div>
+  </div>
 
 </body>
 </html>
