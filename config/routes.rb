@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
-  get '/login', to: 'sessions#new'
-  get '/about', to: 'pages#about'
+  get '/about',    to: 'pages#about'
+  get '/login',    to: 'sessions#new'
+  get '/register', to: 'users#new'
 
-  resources :users, only: [:new]
 
 end
