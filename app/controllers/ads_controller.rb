@@ -4,4 +4,8 @@ class AdsController < ApplicationController
     
   end
 
+  def show
+    render 'ad_example'
+  end
+
 end
