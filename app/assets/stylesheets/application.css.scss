@@ -107,9 +107,11 @@ body {
     float:right;
   }
 }
+
 .model-image{
   border: solid 1px #ddd;
 }
+
 .active-filter{
   padding-left: 15%; 
   padding-top: 2%;
@@ -123,20 +125,35 @@ body {
 .filter-heading{
   font-weight: bold;
 }
+
 .price-range{
   width: 30%;
   display: inline;
 }
 
 #filters-sidebar{
-  
   border-radius: 3px;
   .filter{
     margin-left: 2%;
   }
-
 }
 
 .phone-name{
   font-weight: bold;
+}
+
+/* Ads show page styles
+-------------------------------------------------- */
+.ad-description{
+  padding:1%;
+}
+
+.seller-info{
+  list-style: none;
+  padding-left: 0;
+  padding-top: 2%;
+}
+
+#send-button{
+  float:right;
 }
