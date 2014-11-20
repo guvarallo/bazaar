@@ -1,6 +1,6 @@
 <div class="jumbotron text-center">
   <h1>Bazaar</h1>
-  <h3>A straightforward place to sell and buy cellphones</h3>
+  <h3> We set up the tent. You make the trade</h3>
   <div class="container marketing text-center">
   </br>
   </br>
@@ -23,37 +23,50 @@
     </div><!-- /.row -->
   </div>
 </div>
-<div class="text-center">
-  <h1>Are you a buyer?</h1>
-</br>
-</br>
-  <div class="btn-group">
-    <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-      Select your location here <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" role="menu">
-      <li><a href="#">Alberta</a></li>
-      <li><a href="#">British Columbia</a></li>
-      <li><a href="#">Manitoba</a></li>
-      <li><a href="#">New Brunswick</a></li>
-      <li><a href="#">Newfoundland and Labrador</a></li>
-      <li><a href="#">Nova Scotia</a></li>
-      <li><a href="#">Ontario</a></li>
-      <li><a href="#">Prince Edward Island</a></li>
-      <li><a href="#">Quebec</a></li>
-      <li><a href="#">Saskatchewan</a></li>
-    </ul>
-  </div>
-  </br>
-  </br>
-  </br>
-  <h1>Are you a seller?</h1>
-  </br>
-  </br>
-    <%= link_to "Register to place your first ad", register_path, class: "btn btn-success btn-lg" %>
-  </br>
-  </br>
-  </br>
-  </br>
-  </br>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-lg-offset-2">
+      <h3>Sign up to sell your stuff</h3>
+      <p>It's free and easy</p>
+      <form role="form">
+        <div class="form-group">
+            <input id="username" type="text" class="form-control" placeholder="Username">
+        </div>
+
+        <div class="form-group">
+            <input id="email" type="text" class="form-control" placeholder="Email">
+        </div>
+
+        <div class="form-group">
+            <input id="password" type="text" class="form-control" placeholder="Password">
+        </div>
+
+        <div class="form-group">
+            <input id="repassword" type="text" class="form-control" placeholder="Re-enter Password">
+        </div>
+  
+        <button id="singup-button" type="submit" class="btn btn-success">Sing Up!</button>
+      </form>
+    </div>
+    <div class="col-lg-4 col-lg-offset-1">
+      <h3>...or start browsing now</h3>
+      <div class="btn-group container">
+        <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+          Select your location <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Alberta</a></li>
+          <li><a href="#">British Columbia</a></li>
+          <li><a href="#">Manitoba</a></li>
+          <li><a href="#">New Brunswick</a></li>
+          <li><a href="#">Newfoundland and Labrador</a></li>
+          <li><a href="#">Nova Scotia</a></li>
+          <li><a href="#">Ontario</a></li>
+          <li><a href="#">Prince Edward Island</a></li>
+          <li><a href="#">Quebec</a></li>
+          <li><a href="#">Saskatchewan</a></li>
+        </ul>
+      </div>
+    </div>
+  </div> <!-- end of signup row -->
 </div>
