@@ -6,7 +6,5 @@ Rails.application.routes.draw do
   get '/register', to: 'users#new'
 
   get '/ad-example', to:'ads#show'
-
-  resources :ads
-  resources :users
+  get 'user-example', to:'users#show'
 end
