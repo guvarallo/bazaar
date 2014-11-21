@@ -169,7 +169,6 @@ body {
   float:right;
 }
 
-
 /* Ad placement page styles
 -------------------------------------------------- */
 
@@ -178,4 +177,13 @@ body {
   margin-left: 20px;
   font-weight: normal;
 
+}
+/* Ad placement page styles
+-------------------------------------------------- */
+.user-info{
+  list-style: none;
+  padding-left: 0;
+  li{
+    font-size: 1.2em;
+  }
 }
