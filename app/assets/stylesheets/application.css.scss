@@ -21,8 +21,21 @@
   font-size: 110%;
 }
 
+.padding-corrected { /*This padding is necessary when using the navbar-fixed-top */
+  padding-top: 70px;
+}
+
+.dropdown-toggle {
+  padding-top: 6px !important;
+}
+
+#home-location-button {
+  padding-left: 0px;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
+
 html {
   position: relative;
   min-height: 100%;
@@ -36,13 +49,9 @@ body {
   padding-top: 15px;
 }
 
-.padding-corrected{
-  padding-top: 70px;
-  /*This padding is necessary when using the navbar-fixed-top */
-}
-
 /* Form styles
 -------------------------------------------------- */
+
 .form-signin {
   max-width: 330px;
   margin: 0 auto;
@@ -76,6 +85,7 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
 /* Ads index page styles
 -------------------------------------------------- */
 
@@ -144,6 +154,7 @@ body {
 
 /* Ads show page styles
 -------------------------------------------------- */
+
 .ad-description{
   padding:1%;
 }
@@ -157,13 +168,14 @@ body {
 #send-button{
   float:right;
 }
-/* User show page styles
--------------------------------------------------- */
-.user-info{
-  position:absolute;
-  top: 0px;
-}
 
-.parent{
-  position: relative;
+
+/* Ad placement page styles
+-------------------------------------------------- */
+
+
+.checkbox {
+  margin-left: 20px;
+  font-weight: normal;
+
 }
