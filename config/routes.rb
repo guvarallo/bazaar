@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/about',      to: 'pages#about'
   get '/ad-example', to: 'ads#show'
-  get '/user-example', to: 'users#show'
+  get '/profile', to: 'users#show'
 
   resources :ads,   only: [:index, :new]
 end
