@@ -8,10 +8,6 @@ class ApplicationController < ActionController::Base
     edit_user_registration_path
   end
 
-  def after_update_path_for(resource)
-    edit_user_registration_path
-  end
-
   protected
 
     def configure_permitted_parameters
