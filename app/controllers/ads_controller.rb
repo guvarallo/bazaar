@@ -6,6 +6,8 @@ class AdsController < ApplicationController
     render 'ad_example'
   end
 
-  def new; end
+  def new
+    @ad = Ad.new
+  end
 
 end

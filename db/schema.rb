@@ -11,7 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141218015350) do
+ActiveRecord::Schema.define(version: 20141218172946) do
+
+  create_table "ads", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.float    "price"
+    t.string   "phone_name"
+    t.string   "usage"
+    t.boolean  "warranty"
+    t.string   "phone_condition"
+    t.integer  "brand_id"
+    t.integer  "carrier_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "brands", force: true do |t|
+    t.string   "brand_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
