@@ -1,35 +1,46 @@
-<div class="jumbotron text-center">
-  <h1>Bazaar</h1>
-  <h3> We set up the tent. You make the trade</h3>
-  <div class="container marketing text-center">
-  </br>
-  </br>
-    <div class="row">
-      <div class="col-lg-4">
-        <img class="img-circle" src="/assets/add.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-        <h4>Place/See an Ad</h4>
-        <p id="home">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img class="img-circle" src="/assets/chat.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-        <h4>Make Contact</h4>
-        <p id="home">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img class="img-circle" src="/assets/handshake.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-        <h4>Seal the Deal!</h4>
-        <p id="home">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
+<section id="main" data-type="background" data-speed="10">
+  <div class="jumbotron text-center">
+    <h1><strong>Bazaar</strong></h1></br>
+    <h3>We set up the tent. You make the trade</h3>
+ </div>
+</section>
+
+
+<div class="container marketing text-center">
+  <div class="row featurette">
+    <img class="img-circle" src="/assets/add.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+    <h2 class="featurette-heading">Place/See an Ad</h2>
+    <p class="lead">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
   </div>
+  
+  <hr class="featurette-divider">
+  
+  <div class="row featurette">
+    <img class="img-circle" src="/assets/chat.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+    <h2 class="featurette-heading">Make Contact</h2>
+    <p class="lead">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+  </div>
+  
+  <hr class="featurette-divider">
+  
+  <div class="row featurette">
+    <img class="img-circle" src="/assets/handshake.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+    <h2 class="featurette-heading">Seal the Deal!</h2>
+    <p class="lead">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+  </div>
+  
+  <hr class="featurette-divider">
+
 </div>
-<div class="container text-center">
-  <h1>Are you a seller?</h1>
-  <p>Sign up now to sell your phone, it's free!<p>
-  <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-success btn-lg" %>
-</div>
-<div class="container text-center">
-  <h1>Are you a buyer?</h1>
-  <p>No need to sign up, start browsing the phones now!<p>
-  <%= link_to "Click Here To Start!", "#", class: "btn btn-primary btn-lg" %>
+<div class="row marketing">
+  <div class="container text-center col-lg-6 start">
+    <h1>Are you a seller?</h1>
+    <p class="lead">Sign up now to sell your phone, it's free!<p>
+    <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-success btn-lg" %>
+  </div>
+  <div class="container text-center col-lg-6 start">
+    <h1>Are you a buyer?</h1>
+    <p class="lead">No need to sign up, start browsing the phones now!<p>
+    <%= link_to "Click Here To Start!", "#", class: "btn btn-primary btn-lg" %>
+  </div>
 </div>

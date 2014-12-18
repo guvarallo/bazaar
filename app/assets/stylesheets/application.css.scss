@@ -17,8 +17,31 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-#home {
-  font-size: 110%;
+.navbar {
+  font-family: 'Rozha One', serif;
+}
+
+#main {
+  min-height: 350px;
+  background: url(phonebg.jpg) 50% 0 repeat fixed;
+}
+
+.jumbotron {
+  height: 650px;
+  background-color: transparent;
+  padding-top: 200px;
+  font-family: 'Rozha One', serif;
+  color: #fff;
+}
+
+.featurette {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.start {
+  margin-top: 100px !important;
+  margin-bottom: 120px !important;
 }
 
 .padding-corrected { /*This padding is necessary when using the navbar-fixed-top */
