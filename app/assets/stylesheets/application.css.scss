@@ -19,6 +19,20 @@
 
 .navbar {
   font-family: 'Rozha One', serif;
+  border: none;
+  margin-bottom: 0px;
+  a:link {color: #000 !important; text-decoration: none; }
+  a:active {color: #000 !important; text-decoration: none; }
+  a:visited {color: #000 !important; text-decoration: none; }
+  a:hover {color: #000 !important; text-decoration: none; }
+}
+
+.navbar .navbar-toggle .icon-bar {
+  background-color: #000;
+}
+
+.row { /* Needed to correct page space on the left */
+  margin-right: 0px;
 }
 
 #main {
@@ -48,13 +62,12 @@
   padding-left: 0px !important;
 }
 
-.padding-corrected { /*This padding is necessary when using the navbar-fixed-top */
-  padding-top: 70px;
+.padding-corrected {
+  padding-top: 10px;
 }
 
 .alert {
-  margin-top: 100px;
-  margin-bottom: -50px;
+  margin-bottom: -250px;
   margin-left: 250px;
   margin-right: 250px;
 }
@@ -62,6 +75,7 @@
 .panel {
   margin-left: 400px;
   margin-right: 400px;
+  margin-top: 20px;
 }
 
 .dropdown-toggle {
@@ -72,21 +86,6 @@
   padding-left: 0px;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-
-.text-muted {
-  padding-top: 15px;
-}
 
 /* Form styles
 -------------------------------------------------- */
