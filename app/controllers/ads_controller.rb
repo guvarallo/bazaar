@@ -10,4 +10,8 @@ class AdsController < ApplicationController
     @ad = Ad.new
   end
 
+  def create
+    binding.pry
+  end
+
 end

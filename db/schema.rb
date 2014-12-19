@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141218172946) do
+ActiveRecord::Schema.define(version: 20141219034244) do
 
   create_table "ads", force: true do |t|
     t.string   "title"
@@ -25,10 +25,17 @@ ActiveRecord::Schema.define(version: 20141218172946) do
     t.integer  "carrier_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "accessories"
   end
 
   create_table "brands", force: true do |t|
     t.string   "brand_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "carriers", force: true do |t|
+    t.string   "carrier_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

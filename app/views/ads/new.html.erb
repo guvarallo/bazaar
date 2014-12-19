@@ -3,10 +3,62 @@
     <h2 id="ad_placement">Place your add</h2>
       <%= bootstrap_form_for(@ad) do |f| %>
         <%= f.text_field :title %>
+
         <%= f.number_field :price %>
+
         <%= f.collection_select(:brand_id, Brand.all, :id, :brand_name, :include_blank => 'Please select a brand') %>
+
         <%= f.text_field :phone_name %>
-        
+
+        <%= f.select :phone_condition, [['Never Used'], ['Like new (no signs of use or scratches)'], ['Great (minor signs of use or scratches)'],['Good (apparent scratches or dents)'],['Functional, but with problem (Please specify on the description)']], { label: "Condition" } %>
+
+        <%= f.select :usage, [['Never Used'], ['Less than 3 months'], ['From 3 to 6 months'],['From 6 months to a year'],['From a year to a year and a half'],['From a year and a half to 2 years'],['From 2 to 3 years'],['From 3 to 4 years'], ['More than 4 years']], { label: "Usage time" } %>
+
+        <%= f.select :warranty, [['No'], ['Yes (Please specify on description)']], { label: "Warranty" } %>
+
+        <%= f.collection_select(:carrier_id, Carrier.all, :id, :carrier_name, :include_blank => 'Please select a carrier') %>
+
+        <%= f.form_group :accessories, label: { text: "Accessories" }, help: "If other please specify on description" do %>
+
+          <%= f.check_box :accessories, {multiple: true}, 1 do %>
+            Original receipt
+          <%end %>
+
+          <%= f.check_box :accessories, {multiple: true}, 2  do %>
+            Original box
+          <%end %>
+          <%= f.check_box :accessories, {multiple: true}, 3  do %>
+            Manual
+          <%end %>
+          <%= f.check_box :accessories, {multiple: true}, 4  do %>
+            Wall Charger
+          <%end %>
+          <%= f.check_box :accessories, {multiple: true}, 5  do %>
+            Headphones
+          <%end %>
+          <%= f.check_box :accessories, {multiple: true}, 6  do %>
+            Cable
+          <%end %>
+          <%= f.check_box :accessories, {multiple: true}, 7  do %>
+            Car Charger
+          <%end %>
+          <%= f.check_box :accessories, {multiple: true}, 8  do %>
+            Dock
+          <%end %>
+          <%= f.check_box :accessories, {multiple: true}, 9  do %>
+            Case
+          <%end %>
+          <%= f.check_box :accessories, {multiple: true}, 10  do %>
+            Screen protector
+          <%end %>
+          <%= f.check_box :accessories, {multiple: true}, 11  do %>
+            Extra battery
+          <%end %>
+          <%= f.check_box :accessories, {multiple: true}, 12 do %>
+            Memory card
+          <%end %>
+        <% end %>
+
         <%= f.submit 'Create Ad!' %>
       <% end %> <!-- end of the ad form -->
   </div> <!-- end of row -->
