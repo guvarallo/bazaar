@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get '/user-example', to: 'users#show'
   get '/ads/temp',  to: 'ads#temp'
 
-  resources :ads,   only: [:index, :new, :create]
+  resources :ads,   only: [:index, :new, :create, :show]
 end
