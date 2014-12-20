@@ -4,6 +4,14 @@
   <title><%= content_for?(:title) ? yield(:title) : "Bazaar" %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Rozha One']
+      }
+    });
+  </script>
   <%= csrf_meta_tags %>
 </head>
 <body>

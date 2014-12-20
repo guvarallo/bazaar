@@ -1,18 +1,25 @@
 <div class="container padding-corrected">
-  
-  <h3>Pablito's Profile</h3>
-  
   <div class="row">
     <div class="col-lg-4">
       <ul class="user-info">
-        <li><strong>Username:</strong> Pablito</li>
-        <li><strong>Location:</strong> Copacabana, Brasil</li>
-        <li><strong>Email:</strong>pablito@hotmail.com</li>
-        <li><strong>Phone:</strong>613 786 1324</li>
+        <li><strong>Name:</strong> <%= @user.name %></li>
+        <li><strong>Location:</strong> <%= @user.city %>, <%= @user.province %></li>
+        <li><strong>Email:</strong> <%= @user.email %></li>
+        <li><strong>Phone:</strong> <%= @user.phone_number %></li>
       </ul>
     </div> <!-- End of user info -->
   </div> <!-- end of header row -->
-  <h3>20 Active ads</h3>
+
+  <h4><%= "#{@user.name} activities:" %></h4></br>
+
+<%#    <ul class="nav nav-tabs">%>
+        <%#<li class="<%= 'active' if params[:tab].nil? %>
+          <%#<%= link_to "Posts (#{@user.posts.size})", user_path(@user) %>
+        <%#</li>%>
+        <%#<li class="<%= 'active' if params[:tab] == 'comments' %>
+          <%#<%= link_to "Comments (#{@user.comments.size})", user_path(@user, tab: 'comments') %>
+        <%#</li>%>
+      <%#</ul>%>
   <div class="row">
     <div class="col-lg-3">
       <div class="thumbnail phone-thumbnail">
