@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/about',      to: 'pages#about'
   get '/ad-example', to: 'ads#show'
   get '/profile', to: 'users#show'
+  get '/ads/temp',  to: 'ads#temp'
 
-  resources :ads,   only: [:index, :new]
+  resources :ads,   only: [:index, :new, :create, :show]
 end
