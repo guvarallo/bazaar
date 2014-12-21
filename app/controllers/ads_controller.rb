@@ -11,7 +11,6 @@ class AdsController < ApplicationController
   end
 
   def create
-    binding.pry
     @ad = Ad.new(ad_params)
 
     if @ad.save
