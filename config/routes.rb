@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   get '/about',      to: 'pages#about'
-  get '/ad-example', to: 'ads#show'
   get '/profile', to: 'users#show'
   get '/ads/temp',  to: 'ads#temp'
 
