@@ -10,122 +10,17 @@
     </div> <!-- End of user info -->
   </div> <!-- end of header row -->
 
-  <h4><%= "#{@user.name} activities:" %></h4></br>
+  <h4><%= "#{@user.name}'s activities:" %></h4></br>
 
-<%#    <ul class="nav nav-tabs">%>
-        <%#<li class="<%= 'active' if params[:tab].nil? %>
-          <%#<%= link_to "Posts (#{@user.posts.size})", user_path(@user) %>
-        <%#</li>%>
-        <%#<li class="<%= 'active' if params[:tab] == 'comments' %>
-          <%#<%= link_to "Comments (#{@user.comments.size})", user_path(@user, tab: 'comments') %>
-        <%#</li>%>
-      <%#</ul>%>
-  <div class="row">
-    <div class="col-lg-3">
-      <div class="thumbnail phone-thumbnail">
-        <img class = "model-image" src="/assets/iphone.jpg" alt="bberry">
-          <div class="caption">
-            <ul class="cell-info">
-              <li><h4 class="phone-name">iPhone</h4></li>
-              <li><h4>$200</h4></li>
-            </ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eum inventore, similique reiciendis repellat</p>
-          </div>
-      </div>
-    </div>
+  <ul class="nav nav-tabs">
+    <li class="<%= 'active' if params[:tab].nil? %>">
+      <%= link_to "Ads (#{@user.ads.size})", profile_path(@user) %>
+    </li>
+  </ul>
 
-    <div class="col-lg-3">
-      <div class="thumbnail phone-thumbnail">
-        <img class = "model-image" src="/assets/iphone.jpg" alt="bberry">
-          <div class="caption">
-            <ul class="cell-info">
-              <li><h4 class="phone-name">iPhone</h4></li>
-              <li><h4>$200</h4></li>
-            </ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eum inventore, similique reiciendis repellat</p>
-          </div>
-      </div>
-    </div>
+  <% @user.ads.each do |ad| %>
+    <%= render 'ads/ad', ad: ad %>
+  <% end %>
 
-    <div class="col-lg-3">
-      <div class="thumbnail phone-thumbnail">
-        <img class = "model-image" src="/assets/iphone.jpg" alt="bberry">
-          <div class="caption">
-            <ul class="cell-info">
-              <li><h4 class="phone-name">iPhone</h4></li>
-              <li><h4>$200</h4></li>
-            </ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eum inventore, similique reiciendis repellat</p>
-          </div>
-      </div>
-    </div>
-
-    <div class="col-lg-3">
-      <div class="thumbnail phone-thumbnail">
-        <img class = "model-image" src="/assets/iphone.jpg" alt="bberry">
-          <div class="caption">
-            <ul class="cell-info">
-              <li><h4 class="phone-name">iPhone</h4></li>
-              <li><h4>$200</h4></li>
-            </ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eum inventore, similique reiciendis repellat</p>
-          </div>
-      </div>
-    </div>
-  </div> <!-- end of first row -->
-
-  <div class="row">
-    <div class="col-lg-3">
-      <div class="thumbnail phone-thumbnail">
-        <img class = "model-image" src="/assets/iphone.jpg" alt="bberry">
-          <div class="caption">
-            <ul class="cell-info">
-              <li><h4 class="phone-name">iPhone</h4></li>
-              <li><h4>$200</h4></li>
-            </ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eum inventore, similique reiciendis repellat</p>
-          </div>
-      </div>
-    </div>
-
-    <div class="col-lg-3">
-      <div class="thumbnail phone-thumbnail">
-        <img class = "model-image" src="/assets/iphone.jpg" alt="bberry">
-          <div class="caption">
-            <ul class="cell-info">
-              <li><h4 class="phone-name">iPhone</h4></li>
-              <li><h4>$200</h4></li>
-            </ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eum inventore, similique reiciendis repellat</p>
-          </div>
-      </div>
-    </div>
-
-    <div class="col-lg-3">
-      <div class="thumbnail phone-thumbnail">
-        <img class = "model-image" src="/assets/iphone.jpg" alt="bberry">
-          <div class="caption">
-            <ul class="cell-info">
-              <li><h4 class="phone-name">iPhone</h4></li>
-              <li><h4>$200</h4></li>
-            </ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eum inventore, similique reiciendis repellat</p>
-          </div>
-      </div>
-    </div>
-
-    <div class="col-lg-3">
-      <div class="thumbnail phone-thumbnail">
-        <img class = "model-image" src="/assets/iphone.jpg" alt="bberry">
-          <div class="caption">
-            <ul class="cell-info">
-              <li><h4 class="phone-name">iPhone</h4></li>
-              <li><h4>$200</h4></li>
-            </ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eum inventore, similique reiciendis repellat</p>
-          </div>
-      </div>
-    </div>
-  </div> <!-- end of first row -->
-    
+    </div> <!-- end of first row -->
 </div> <!-- end of big wrapper container -->
