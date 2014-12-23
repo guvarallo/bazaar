@@ -2,7 +2,11 @@ class AdsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :current_user,       except: [:index, :show]
 
-  def index; end
+  def index
+    @ads = Ad.all
+    @brands = Brand.all
+    @carriers = Carrier.all
+  end
 
   def show
     @ad = Ad.find(params[:id])
