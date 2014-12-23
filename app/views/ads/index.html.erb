@@ -9,29 +9,21 @@
       <div class="row filter">
         <h4 class="filter-heading">Brand</h4>
         <ul class="filter-list">
-          <li><a href="">Apple</a> (351)</li>
-          <li class="active-filter"><a href="">Samsung</a> (228)</li>
-          <li><a href="">HTC</a> (265)</li>
-          <li><a href="">ONEPLUS ONE</a> (134)</li>
-          <li><a href="">Nokia</a> (110)</li>
-          <li><a href="">Blackberry</a> (1)</li>
+          <% @brands.each do |brand| %>
+            <li> 
+            <%= link_to brand.brand_name, '#' %> (<%= brand.ads.size %>)
+            </li>
+          <%end%>
         </ul>
       </div> 
 
       <div class="row filter">
         <h4 class="filter-heading">Carriers</h4>
         <ul class="filter-list">
-          <li><a href="">Unlocked (300)</a></li>
-          <li><a href="">Rogers (300)</a></li>
-          <li><a href="">Telus (300)</a></li>
-          <li class="active-filter"><a href="">Bell (300)</a></li>
-          <li><a href="">Globalive (300)</a></li>
-          <li><a href="">SaskTel (300)</a></li>
-          <li><a href="">Videotron (300)</a></li>
-          <li><a href="">Dave (300)</a></li>
-          <li><a href="">Bragg (300)</a></li>
-          <li><a href="">TBayTel (300)</a></li>
-          <li><a href="">Ice (300)</a></li>
+          <% @carriers.each do |carrier| %>
+            <li> 
+            <%= link_to carrier.carrier_name, '#' %> (<%= carrier.ads.size %>) </li>
+          <%end%>
         </ul>
       </div> 
 
@@ -74,120 +66,32 @@
             </button>
             <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
               <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Lowest Price</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Seller reputation</a></li>
               <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Best conditions</a></li>
             </ul>
           </div> 
         </div>
       </div><!-- end of navigation row -->
-
-      <div class="row">
-        <div class=" col-md-3 ">
-          <div class="thumbnail phone-thumbnail">
-            <a href="/ad-example"><img class="model-image" src="/assets/bberry.jpg" alt="bberry"></a>
-            <div class="caption">
-              <ul class="cell-info">
-                <li><h4 class="phone-name">BlackBerry</h4></li>
-                <li><h4>$1</h4></li>
-              </ul>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eum inventore, similique reiciendis repellat</p>
+      
+      <% @ads.each_slice(4) do |ads| %>
+        <div class="row">
+          <% ads.each do |ad| %>
+            <div class=" col-md-3 ">
+              <div class="thumbnail phone-thumbnail">
+                <%= link_to ad_path(ad) do %>
+                  <img class="model-image" src="/assets/bberry.jpg" alt="bberry">
+                <%end%>
+                <div class="caption">
+                  <ul class="cell-info">
+                    <li><h4 class="phone-name"><%=ad.title%></h4> </li>
+                    <li><h4> $<%=ad.price%></h4></li>
+                  </ul>
+                  <p><%=ad.description%></p>
+                </div>
+              </div>
             </div>
-          </div>
+          <%end%>
         </div>
-
-        <div class=" col-md-3">
-          <div class="thumbnail phone-thumbnail">
-            <img class = "model-image" src="/assets/iphone.jpg" alt="bberry">
-            <div class="caption">
-              <ul class="cell-info">
-                <li><h4 class="phone-name">iPhone</h4></li>
-                <li><h4>$200</h4></li>
-              </ul>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eum inventore, similique reiciendis repellat</p>
-            </div>
-          </div>
-        </div>
-
-        <div class=" col-md-3">
-          <div class="thumbnail phone-thumbnail">
-            <img class = "model-image" src="/assets/nokia.jpg" alt="bberry">
-            <div class="caption">
-              <ul class="cell-info">
-                <li><h4 class="phone-name">Nokia</h4></li>
-                <li><h4>$80</h4></li>
-              </ul>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eum inventore, similique reiciendis repellat</p>
-            </div>
-          </div>
-        </div>
-
-        <div class=" col-md-3">
-          <div class="thumbnail phone-thumbnail">
-            <img class = "model-image" src="/assets/nokia2.jpg" alt="bberry">
-            <div class="caption">
-              <ul class="cell-info">
-                <li><h4 class="phone-name">Nokia</h4></li>
-                <li><h4>$100</h4></li>
-              </ul>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eum inventore, similique reiciendis repellat</p>
-            </div>
-          </div>
-        </div>
-      </div><!-- end of ads row 1 -->
-
-      <div class="row">
-        <div class=" col-md-3 ">
-          <div class="thumbnail phone-thumbnail">
-            <img class = "model-image" src="/assets/bberry.jpg" alt="bberry">
-            <div class="caption">
-              <ul class="cell-info">
-                <li><h4 class="phone-name">Blackberry</h4></li>
-                <li><h4>$1</h4></li>
-              </ul>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eum inventore, similique reiciendis repellat</p>
-            </div>
-          </div>
-        </div>
-
-        <div class=" col-md-3">
-          <div class="thumbnail phone-thumbnail">
-            <img class = "model-image" src="/assets/iphone.jpg" alt="bberry">
-            <div class="caption">
-              <ul class="cell-info">
-                <li><h4 class="phone-name">iPhone</h4></li>
-                <li><h4>$50</h4></li>
-              </ul>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eum inventore, similique reiciendis repellat</p>
-            </div>
-          </div>
-        </div>
-
-        <div class=" col-md-3">
-          <div class="thumbnail phone-thumbnail">
-            <img class = "model-image" src="/assets/nokia.jpg" alt="bberry">
-            <div class="caption">
-              <ul class="cell-info">
-                <li><h4 class="phone-name">Nokia</h4></li>
-                <li><h4>$50</h4></li>
-              </ul>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eum inventore, similique reiciendis repellat</p>
-            </div>
-          </div>
-        </div>
-
-        <div class=" col-md-3">
-          <div class="thumbnail phone-thumbnail">
-            <img class = "model-image" src="/assets/nokia2.jpg" alt="bberry">
-            <div class="caption">
-              <ul class="cell-info">
-                <li><h4 class="phone-name">Nokia</h4></li>
-                <li><h4>$50</h4></li>
-              </ul>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eum inventore, similique reiciendis repellat</p>
-            </div>
-          </div>
-        </div>
-      </div><!-- end of ads row 2 -->
+      <%end%>
     </div> <!-- end of ads column -->
   </div> <!-- end of main row --> 
 </div> <!-- end of container corrected padding -->
