@@ -8,6 +8,8 @@
 
         <%= f.collection_select(:brand_id, Brand.all, :id, :brand_name, :include_blank => 'Please select a brand') %>
 
+        <%= f.attachinary_file_field :photos %>
+
         <%= f.text_field :phone_name, label: 'Phone model' %>
 
         <%= f.select :phone_condition, [['Never Used'], ['Like new (no signs of use or scratches)'], ['Great (minor signs of use or scratches)'],['Good (apparent scratches or dents)'],['Functional, but with problem']], { label: "Condition" } %>
