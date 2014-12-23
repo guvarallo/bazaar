@@ -19,10 +19,11 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :development do
+group :developmnet, :test do
   gem 'quiet_assets'
   gem 'pry'
   gem 'sqlite3'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 group :production do

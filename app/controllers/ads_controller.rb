@@ -1,4 +1,6 @@
 class AdsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :current_user,       except: [:index, :show]
 
   def index; end
 
@@ -12,6 +14,7 @@ class AdsController < ApplicationController
 
   def create
     @ad = Ad.new(ad_params)
+    @ad.user = current_user
 
     if @ad.save
       flash[:notice] = 'Your ad was successfully created'
