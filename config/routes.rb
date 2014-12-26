@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { :registrations => :registrations }
+  authenticated do
+      root :to => 'ads#index', as: :authenticated
+  end
   root 'pages#home'
 
   get '/about',      to: 'pages#about'

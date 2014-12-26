@@ -18,7 +18,7 @@
     </li>
   </ul>
 
-  <% @user.ads.each do |ad| %>
+  <% @user.ads.each_slice(4) do |ad| %>
     <%= render 'ads/ad', ad: ad %>
   <% end %>
 

@@ -11,7 +11,7 @@
           <%= devise_error_messages! %>
 
       <div class="form-group">
-        <%= f.label :name %>
+        <%= f.label :name %> <i>*</i>
         <%= f.text_field :name, class: "form-control", :autofocus => true %>
       </div>
 
@@ -21,12 +21,12 @@
       </div>
 
       <div class="form-group">
-        <%= f.label :city %>
+        <%= f.label :city %> <i>*</i>
         <%= f.text_field :city, class: "form-control", :autofocus => true %>
       </div>
 
       <div class="form-group">
-        <%= f.label :province %>
+        <%= f.label :province %> <i>*</i>
         <%= f.text_field :province, class: "form-control", :autofocus => true %>
       </div>
 
