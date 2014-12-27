@@ -48,13 +48,16 @@
       <div class="row filter">
         <h4 class="filter-heading">Conditions</h4>
         <ul class="filter-list">
-          <li class= "active-filter"><a href="">Never used</a> (3)</li>
-          <li><a href="">Like new </a> (20)</li>
-          <li><a href="">Great</a> (300)</li>
-          <li><a href="">Good</a> (121)</li>
-          <li><a href="">Functional</a> (13)</li>
-          <li><a href="">Turns on</a> (1)</li>
-        </ul>
+          <% for row in @search.facet(:condition_id).rows %>
+           <li> 
+            <% if params[:condition].blank? %>
+              <%= link_to Condition.find(row.value).condition_status, params.merge({ :condition => row.value}) %> (<%=row.count%>)
+            <%else%>
+              <%= Condition.find(row.value).condition_status%> (<%= link_to 'remove', params.merge({ :condition => nil}) %> )
+            <%end%>
+            </li>
+          <%end%>
+        </ul> 
       </div>  
 
        

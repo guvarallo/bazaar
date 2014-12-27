@@ -5,9 +5,10 @@ class AdsController < ApplicationController
   def index
     @search =  Ad.search do
       fulltext params[:search]
-      facet :brand_id, :carrier_id
+      facet :brand_id, :carrier_id, :condition_id
       with(:brand_id, params[:brand]) if params[:brand].present?
       with(:carrier_id, params[:carrier]) if params[:carrier].present?
+      with(:condition_id, params[:condition]) if params[:condition].present?
     end
     @ads = @search.results
     @carriers = Carrier.all

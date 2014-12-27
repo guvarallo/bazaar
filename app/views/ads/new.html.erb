@@ -14,9 +14,7 @@
 
         <%= f.collection_select(:condition_id, Condition.all, :id, :condition_status, :include_blank => 'Please select an adecuate phone condition') %>
 
-        <%# f.select :phone_condition, [['Never Used'], ['Like new (no signs of use or scratches)'], ['Great (minor signs of use or scratches)'],['Good (apparent scratches or dents)'],['Functional, but with problem']], { label: "Condition" } %>
-
-        <%= f.select :usage, [['Never Used'], ['Less than 3 months'], ['From 3 to 6 months'],['From 6 months to a year'],['From a year to a year and a half'],['From a year and a half to 2 years'],['From 2 to 3 years'],['From 3 to 4 years'], ['More than 4 years']], { label: "Usage time" } %>
+                <%= f.select :usage, [['Never Used'], ['Less than 3 months'], ['From 3 to 6 months'],['From 6 months to a year'],['From a year to a year and a half'],['From a year and a half to 2 years'],['From 2 to 3 years'],['From 3 to 4 years'], ['More than 4 years']], { label: "Usage time" } %>
 
         <%= f.select :warranty, [['No'], ['Yes']], { label: "Warranty" } %>
 

@@ -14,6 +14,7 @@ class Ad < ActiveRecord::Base
    text :description
    integer :brand_id
    integer :carrier_id
+   integer :condition_id
   end
 
 end
