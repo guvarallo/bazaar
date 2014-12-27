@@ -10,7 +10,11 @@ class Ad < ActiveRecord::Base
   has_attachments :photos, maximum: 4
 
   searchable do
-    text :title, :phone_name
+   text :title, :boost => 4
+   text :phone_name, :boost => 2
+   text :description
+   integer :brand_id
+   integer :carrier_id
   end
 
 end

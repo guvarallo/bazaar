@@ -3,9 +3,13 @@ class AdsController < ApplicationController
   before_action :current_user,       except: [:index, :show]
 
   def index
-    binding.pry
-    @ads = Ad.all
-    @brands = Brand.all
+    @search =  Ad.search do
+      fulltext params[:search]
+      facet :brand_id, :carrier_id
+      with(:brand_id, params[:brand]) if params[:brand].present?
+      with(:carrier_id, params[:carrier]) if params[:carrier].present?
+    end
+    @ads = @search.results
     @carriers = Carrier.all
   end
 

@@ -9,9 +9,13 @@
       <div class="row filter">
         <h4 class="filter-heading">Brand</h4>
         <ul class="filter-list">
-          <% @brands.each do |brand| %>
+          <% for row in @search.facet(:brand_id).rows %>
             <li> 
-            <%= link_to brand.brand_name, '#' %> (<%= brand.ads.size %>)
+              <% if params[:brand].blank? %>
+                <%= link_to Brand.find(row.value).brand_name, params.merge({ :brand => row.value}) %> (<%=row.count%>)
+              <%else%>
+                <%= Brand.find(row.value).brand_name%> (<%= link_to 'remove', params.merge({ :brand => nil}) %> )
+              <%end%>
             </li>
           <%end%>
         </ul>
@@ -20,9 +24,14 @@
       <div class="row filter">
         <h4 class="filter-heading">Carriers</h4>
         <ul class="filter-list">
-          <% @carriers.each do |carrier| %>
-            <li> 
-            <%= link_to carrier.carrier_name, '#' %> (<%= carrier.ads.size %>) </li>
+          <% for row in @search.facet(:carrier_id).rows %>
+           <li> 
+            <% if params[:carrier].blank? %>
+              <%= link_to Carrier.find(row.value).carrier_name, params.merge({ :carrier => row.value}) %> (<%=row.count%>)
+            <%else%>
+              <%= Carrier.find(row.value).carrier_name%> (<%= link_to 'remove', params.merge({ :carrier => nil}) %> )
+            <%end%>
+            </li>
           <%end%>
         </ul>
       </div> 
@@ -61,7 +70,7 @@
         <div class="col-lg-6">
           <div  class="pull-right">
             <%= form_tag("/ads", method: 'get') do %>
-              <%= text_field_tag(:q) %>
+              <%= text_field_tag(:search) %>
               <%= submit_tag("Search")%>
             <%end%> 
           </div> 
