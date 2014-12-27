@@ -8,7 +8,7 @@
 
         <%= f.collection_select(:brand_id, Brand.all, :id, :brand_name, :include_blank => 'Please select a brand') %>
 
-        <%= f.attachinary_file_field :photos %>
+        <%# f.attachinary_file_field :photos %>
 
         <%= f.text_field :phone_name, label: 'Phone model' %>
 

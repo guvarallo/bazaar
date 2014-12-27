@@ -18,6 +18,8 @@ gem 'devise'
 gem 'cloudinary'
 gem 'attachinary'
 gem 'thin'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
 
 group :doc do
   gem 'sdoc', require: false

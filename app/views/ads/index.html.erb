@@ -59,15 +59,11 @@
           </p>
         </div>
         <div class="col-lg-6">
-          <div  class="dropdown pull-right">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-              <span class = "glyphicon glyphicon-sort-by-attributes-alt"></span> Sort by
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Lowest Price</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Best conditions</a></li>
-            </ul>
+          <div  class="pull-right">
+            <%= form_tag("/ads", method: 'get') do %>
+              <%= text_field_tag(:q) %>
+              <%= submit_tag("Search")%>
+            <%end%> 
           </div> 
         </div>
       </div><!-- end of navigation row -->

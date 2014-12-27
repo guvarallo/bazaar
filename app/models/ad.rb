@@ -9,4 +9,8 @@ class Ad < ActiveRecord::Base
 
   has_attachments :photos, maximum: 4
 
+  searchable do
+    text :title, :phone_name
+  end
+
 end

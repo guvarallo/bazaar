@@ -3,6 +3,7 @@ class AdsController < ApplicationController
   before_action :current_user,       except: [:index, :show]
 
   def index
+    binding.pry
     @ads = Ad.all
     @brands = Brand.all
     @carriers = Carrier.all
