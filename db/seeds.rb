@@ -38,3 +38,14 @@ Carrier.create(carrier_name: 'Bragg')
 Carrier.create(carrier_name: 'TBayTel')
 Carrier.create(carrier_name: 'Ice')
 Carrier.create(carrier_name: 'Other')
+
+Condition.create(condition_status: 'Never Used')
+Condition.create(condition_status: 'Like new (no signs of use or scratches')
+Condition.create(condition_status: 'Great (minor signs of use or scratches')
+Condition.create(condition_status: 'Good (apparent scratches or dents)')
+Condition.create(condition_status: 'Functional, but with problems')
+
+
+
+
+
