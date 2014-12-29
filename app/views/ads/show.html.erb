@@ -66,9 +66,11 @@
         <div class="col-lg-12">
           <p class = 'lead'> <strong>Accessories</strong></p>
             <ul>
+            <% unless @ad.accessories.blank? %>
               <% accessories_names(@ad).each do |accessory| %>
                 <li><%= accessory %></li>
               <% end %>
+            <%end %>
             </ul>
         </div>
       </div>

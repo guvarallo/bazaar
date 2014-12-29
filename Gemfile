@@ -20,6 +20,8 @@ gem 'attachinary'
 gem 'thin'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
+gem 'fabrication'
+gem 'faker'
 
 group :doc do
   gem 'sdoc', require: false

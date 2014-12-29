@@ -45,6 +45,7 @@ Condition.create(condition_status: 'Great (minor signs of use or scratches')
 Condition.create(condition_status: 'Good (apparent scratches or dents)')
 Condition.create(condition_status: 'Functional, but with problems')
 
+100.times {Fabricate(:ad)}  
 
 
 

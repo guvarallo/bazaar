@@ -11,7 +11,6 @@ class AdsController < ApplicationController
       with(:condition_id, params[:condition]) if params[:condition].present?
     end
     @ads = @search.results
-    @carriers = Carrier.all
   end
 
   def show
