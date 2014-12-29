@@ -86,10 +86,10 @@
     <div class="col-lg-3">
       <h3>Seller's Information</h3>
       <ul class="user-info">
-        <li><strong>Username: 
-        <li><strong>Location: 
-        <li><strong>Email:
-        <li><strong>Phone: 
+        <li><strong>Username:</strong> <%=@ad.user.name %> 
+        <li><strong>Location: </strong><%=@ad.user.city%>, <%=@ad.user.province%> 
+        <li><strong>Email: </strong><%= @ad.user.email%>
+        <li><strong>Phone: </strong> <%= @ad.user.phone_number %>
       </ul>
       
       <h3>Send a message</h3>

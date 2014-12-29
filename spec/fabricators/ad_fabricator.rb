@@ -4,4 +4,5 @@ Fabricator(:ad) do
   brand_id {(1..16).to_a.sample} 
   carrier_id {(1..13).to_a.sample}
   condition_id{(1..5).to_a.sample}
+  user_id{(1..2).to_a.sample}
 end

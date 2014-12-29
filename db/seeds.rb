@@ -45,6 +45,10 @@ Condition.create(condition_status: 'Great (minor signs of use or scratches')
 Condition.create(condition_status: 'Good (apparent scratches or dents)')
 Condition.create(condition_status: 'Functional, but with problems')
 
+User.create(name: 'Guvarallo', city:'Brasilia', province:'Alberta', phone_number: '555-6666', email: 'gustavo@gmail.com', password: 'password')
+
+User.create(name: 'Eduardo', city:'Kingston', province:'Ontario', phone_number: '666-7777', email: 'gustavo@gmail.com', password: 'password')
+
 100.times {Fabricate(:ad)}  
 
 
