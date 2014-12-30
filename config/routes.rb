@@ -10,5 +10,4 @@ Rails.application.routes.draw do
   get '/ads/temp',  to: 'ads#temp'
 
   resources :ads,   only: [:index, :new, :create, :show]
-  mount Attachinary::Engine => "/attachinary"
 end

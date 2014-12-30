@@ -15,9 +15,8 @@ gem 'autoprefixer-rails'
 gem 'haml'
 gem 'will_paginate', '~> 3.0.6'
 gem 'devise'
-gem 'cloudinary'
-gem 'attachinary'
 gem 'thin'
+gem 'uploadcare-rails', "~> 1.0"
 
 group :doc do
   gem 'sdoc', require: false

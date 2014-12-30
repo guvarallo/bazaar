@@ -13,10 +13,7 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require cloudinary
 //= require jquery-ui
-//= require cloudinary/jquery.cloudinary
-//= require attachinary
 //= require turbolinks
 //= require_tree .
 
