@@ -1,5 +1,4 @@
 class Ad < ActiveRecord::Base
-
   belongs_to :user
   belongs_to :brand
   belongs_to :carrier
@@ -16,5 +15,4 @@ class Ad < ActiveRecord::Base
    integer :carrier_id
    integer :condition_id
   end
-
 end
