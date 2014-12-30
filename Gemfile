@@ -16,6 +16,10 @@ gem 'haml'
 gem 'will_paginate', '~> 3.0.6'
 gem 'devise'
 gem 'thin'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+gem 'fabrication'
+gem 'faker'
 gem 'uploadcare-rails', "~> 1.0"
 
 group :doc do
