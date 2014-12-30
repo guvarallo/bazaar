@@ -5,7 +5,9 @@
         <li><strong>Name:</strong> <%= @user.name %></li>
         <li><strong>Location:</strong> <%= @user.city %>, <%= @user.province %></li>
         <li><strong>Email:</strong> <%= @user.email %></li>
-        <li><strong>Phone:</strong> <%= @user.phone_number %></li>
+        <% if @user.phone_number.present? %>
+          <li><strong>Phone:</strong> <%= @user.phone_number %></li>
+        <% end %>
       </ul>
     </div> <!-- End of user info -->
   </div> <!-- end of header row -->
@@ -18,7 +20,7 @@
     </li>
   </ul>
 
-  <% @user.ads.each do |ad| %>
+  <% @user.ads.each_slice(4) do |ad| %>
     <%= render 'ads/ad', ad: ad %>
   <% end %>
 

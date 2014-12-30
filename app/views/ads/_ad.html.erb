@@ -1,14 +1,18 @@
 <div class="row">
-  <div class="col-lg-3">
-    <div class="thumbnail phone-thumbnail">
-      <img class = "model-image" src="/assets/iphone.jpg" alt="bberry">
+  <% ad.each do |a| %>
+    <div class=" col-md-3 ">
+      <div class="thumbnail phone-thumbnail">
+      <%= link_to ad_path(a) do %>
+        <img class="model-image" src="/assets/bberry.jpg" alt="bberry">
+      <% end %>
       <div class="caption">
         <ul class="cell-info">
-          <li><h4 class="phone-name"><%= ad.phone_name %></h4></li>
-          <li><h4>CAD <%= ad.price %></h4></li>
+          <li><h4 class="phone-name"><%=a.title%></h4> </li>
+          <li><h4>CAD <%=a.price%></h4></li>
         </ul>
-        <p><%= ad.title %></p>
+        <p><%=a.description%></p>
       </div>
     </div>
   </div>
+  <% end %>
 </div>

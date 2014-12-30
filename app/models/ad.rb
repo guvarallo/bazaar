@@ -7,6 +7,4 @@ class Ad < ActiveRecord::Base
 
   serialize :accessories
 
-  has_attachments :photos, maximum: 4
-
 end
