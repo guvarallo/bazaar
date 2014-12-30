@@ -5,7 +5,7 @@ class Ad < ActiveRecord::Base
   belongs_to :condition
   serialize :accessories
 
-  has_attachments :photos, maximum: 4
+ # has_attachments :photos, maximum: 4
 
   searchable do
    text :title, :boost => 4
