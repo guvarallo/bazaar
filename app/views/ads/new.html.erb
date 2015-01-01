@@ -9,13 +9,12 @@
         <%= f.collection_select(:brand_id, Brand.all, :id, :brand_name, :include_blank => 'Please select a brand') %>
 
         <%= f.label :picture %></br>
-        <%= uploadcare_uploader_field :post, :file, :data => {:multiple => true} %></br></br>
 
         <%= f.text_field :phone_name, label: 'Phone model' %>
 
         <%= f.collection_select(:condition_id, Condition.all, :id, :condition_status, :include_blank => 'Please select an adecuate phone condition') %>
 
-                <%= f.select :usage, [['Never Used'], ['Less than 3 months'], ['From 3 to 6 months'],['From 6 months to a year'],['From a year to a year and a half'],['From a year and a half to 2 years'],['From 2 to 3 years'],['From 3 to 4 years'], ['More than 4 years']], { label: "Usage time" } %>
+        <%= f.select :usage, [['Never Used'], ['Less than 3 months'], ['From 3 to 6 months'],['From 6 months to a year'],['From a year to a year and a half'],['From a year and a half to 2 years'],['From 2 to 3 years'],['From 3 to 4 years'], ['More than 4 years']], { label: "Usage time" } %>
 
         <%= f.select :warranty, [['No'], ['Yes']], { label: "Warranty" } %>
 

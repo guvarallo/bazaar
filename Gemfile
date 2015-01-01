@@ -6,6 +6,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'jquery.fileupload-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bcrypt-ruby', '~> 3.1.2'
@@ -20,7 +21,6 @@ gem 'sunspot_rails'
 gem 'sunspot_solr'
 gem 'fabrication'
 gem 'faker'
-gem 'uploadcare-rails', "~> 1.0"
 
 group :doc do
   gem 'sdoc', require: false
