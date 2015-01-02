@@ -29,22 +29,6 @@ ActiveRecord::Schema.define(version: 20141227162942) do
     t.integer  "condition_id"
   end
 
-  create_table "attachinary_files", force: true do |t|
-    t.integer  "attachinariable_id"
-    t.string   "attachinariable_type"
-    t.string   "scope"
-    t.string   "public_id"
-    t.string   "version"
-    t.integer  "width"
-    t.integer  "height"
-    t.string   "format"
-    t.string   "resource_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "attachinary_files", ["attachinariable_type", "attachinariable_id", "scope"], name: "by_scoped_parent"
-
   create_table "brands", force: true do |t|
     t.string   "brand_name"
     t.datetime "created_at"
