@@ -4,6 +4,12 @@
   <title><%= content_for?(:title) ? yield(:title) : "Bazaar" %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery.ui.widget.js' %>
+  <script src="https://blueimp.github.com/JavaScript-Templates/tmpl.min.js"></script>
+  <script src="https://blueimp.github.com/JavaScript-Load-Image/load-image.all.min.js"></script>
+  <%= javascript_include_tag 'jquery.iframe-transport.js' %>
+  <%= javascript_include_tag 'jquery.fileupload.js' %>
+  <%= javascript_include_tag 'jquery.fileupload-ui.js' %>
   <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script>
     WebFont.load({
