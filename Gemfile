@@ -19,8 +19,6 @@ gem 'devise'
 gem 'thin'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
-gem 'fabrication'
-gem 'faker'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'annotate', '~> 2.6.5'
@@ -33,7 +31,15 @@ group :developmnet, :test do
   gem 'quiet_assets'
   gem 'pry'
   gem 'sqlite3'
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails', '2.99'
+  gem 'faker'
+  gem 'fabrication'
+end
+
+group :test do
+  gem 'database_cleaner', '1.2.0'
+  gem 'shoulda-matchers'
+  gem 'capybara'
 end
 
 group :production do
