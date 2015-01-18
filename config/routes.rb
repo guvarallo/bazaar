@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   get '/profile', to: 'users#show'
   get '/ads/temp',  to: 'ads#temp'
 
-  resources :ads,   only: [:index, :new, :create, :show]
+  resources :ads,      only: [:index, :new, :create, :show]
+  resources :pictures, only: [:index, :create, :destroy]
 end

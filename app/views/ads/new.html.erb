@@ -1,14 +1,26 @@
 <div class="container padding-corrected">
   <div class="row">
     <h2 id="ad_placement">Place your ad</h2>
-      <%= bootstrap_form_for(@ad, label_errors: true) do |f| %>
+    <%= bootstrap_form_for(@ad, label_errors: true, :html => { :multipart => true }) do |f| %>
         <%= f.text_field :title %>
 
         <%= f.number_field :price, label: ' Price (in CAN $)'%>
 
         <%= f.collection_select(:brand_id, Brand.all, :id, :brand_name, :include_blank => 'Please select a brand') %>
 
-        <%= f.label :picture %></br>
+        <%= f.fields_for :pictures do |p| %>
+          <%= p.file_field :avatar, label: 'Pictures', :multiple => true, :id => "fileupload", name: "pictures[avatar][]" %>
+        <% end %>
+
+        <ins></ins>
+        <script id="template-upload" type="text/x-jquery-tmpl">
+          <tr class="template-upload fade">
+            <td class="preview"><span class="fade"></span></td>
+            <td class="name"><span>${name}</span></td>
+          </tr>
+        </script>
+        <script type="text/javascript" charset="utf-8">
+        </script>
 
         <%= f.text_field :phone_name, label: 'Phone model' %>
 

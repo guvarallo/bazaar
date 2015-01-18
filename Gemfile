@@ -21,6 +21,9 @@ gem 'sunspot_rails'
 gem 'sunspot_solr'
 gem 'fabrication'
 gem 'faker'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'annotate', '~> 2.6.5'
 
 group :doc do
   gem 'sdoc', require: false

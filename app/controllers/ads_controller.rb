@@ -15,10 +15,12 @@ class AdsController < ApplicationController
 
   def show
     @ad = Ad.find(params[:id])
+    @pictures = @ad.pictures.all
   end
 
   def new
     @ad = Ad.new
+    @picture = @ad.pictures.build
   end
 
   def create
@@ -26,6 +28,9 @@ class AdsController < ApplicationController
     @ad.user = current_user
 
     if @ad.save
+      params[:pictures]['avatar'].each do |a|
+        @picture = @ad.pictures.create!(:avatar => a, :ad_id => @ad.id)
+      end
       flash[:notice] = 'Your ad was successfully created'
       redirect_to ad_path(@ad)
     else

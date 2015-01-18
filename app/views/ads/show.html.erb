@@ -7,34 +7,23 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="thumbnail">
-            <img src="/assets/nokia.jpg" alt="">
+            <%= image_tag @pictures.first.avatar_url, :style => "width: 200px; height: 200px;" %>
           </div>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-lg-2">
-          <div class="thumbnail"><img src="/assets/nokia.jpg" alt=""></div>
-        </div>
-        <div class="col-lg-2">
-          <div class="thumbnail"><img src="/assets/nokia.jpg" alt=""></div>
-        </div>
-        <div class="col-lg-2">
-          <div class="thumbnail"><img src="/assets/nokia.jpg" alt=""></div>
-        </div>
-        <div class="col-lg-2">
-          <div class="thumbnail"><img src="/assets/nokia.jpg" alt=""></div>
-        </div>
-        <div class="col-lg-2">
-          <div class="thumbnail"><img src="/assets/nokia.jpg" alt=""></div>
-        </div>
-        <div class="col-lg-2">
-          <div class="thumbnail"><img src="/assets/nokia.jpg" alt=""></div>
-        </div>
+          <% @pictures.each do |p| %>
+            <%= image_tag p.avatar_url, :style => "width: 50px; height: 50px;"  %>
+          <% end %>
+      </div>
+      </br>
+
+      <div class="row col-lg-6">
+        <p class="lead"><strong>Price: </strong>$ <%=@ad.price%> </p>
+        <p class="lead"><strong>General info:</strong></p>
       </div>
 
-      <p class="lead"><strong>Price: </strong>$ <%=@ad.price%> </p>
-      <p class="lead"><strong>General info:</strong></p>
       <div class="row">
         <div class="col-lg-12">
           <table class="table table-bordered">
