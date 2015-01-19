@@ -36,7 +36,7 @@ class AdsController < ApplicationController
     else
       render new_ad_path
     end
-    
+
   end
 
   private

@@ -9,5 +9,5 @@
 #
 
 class Condition < ActiveRecord::Base
-  has_many :ads  
+  has_many :ads
 end

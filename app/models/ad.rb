@@ -24,7 +24,7 @@ class Ad < ActiveRecord::Base
   belongs_to :carrier
   belongs_to :condition
   serialize  :accessories
-  has_many   :pictures, :inverse_of => :ad, :dependent => :destroy
+  has_many   :pictures, :dependent => :destroy
   accepts_nested_attributes_for :pictures
 
   searchable do
