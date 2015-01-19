@@ -22,6 +22,7 @@ gem 'sunspot_solr'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'annotate', '~> 2.6.5'
+gem 'pg'
 
 group :doc do
   gem 'sdoc', require: false
@@ -43,6 +44,5 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
