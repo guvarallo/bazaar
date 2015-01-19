@@ -31,7 +31,6 @@ end
 group :developmnet, :test do
   gem 'quiet_assets'
   gem 'pry'
-  gem 'sqlite3'
   gem 'rspec-rails', '2.99'
   gem 'faker'
   gem 'fabrication'
