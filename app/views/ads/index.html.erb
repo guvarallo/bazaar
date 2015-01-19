@@ -75,7 +75,7 @@
             <div class=" col-md-3 ">
               <div class="thumbnail phone-thumbnail">
                 <%= link_to ad_path(ad) do %>
-                  <img class="model-image" src="/assets/bberry.jpg" alt="bberry">
+                  <%= image_tag ad.pictures.first.avatar_url, :style => "width: 200px; height: 200px;" %>
                 <%end%>
                 <div class="caption">
                   <ul class="cell-info">
